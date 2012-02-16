@@ -4,6 +4,13 @@
         android:title="@string/title">
 	</PreferenceCategory>
 	<Preference 
+	    android:title="@string/current_pro"
+	    android:key="key_current"
+	    android:summary="@string/default_pro"/>
+	<PreferenceCategory
+	    android:title="@string/quick_settings">
+	 </PreferenceCategory>
+	<Preference 
 	    android:title="@string/prefTitle"
 	    android:summary="@string/checkInfo"/>
 	<CheckBoxPreference
@@ -31,6 +38,15 @@
 	    android:title="@string/mute"
 	    android:summary="@string/mute_description"
 	    android:key="muteButton"/>
+	<PreferenceCategory 
+	    android:title="@string/choose_new">    
+	</PreferenceCategory>
+	<ListPreference
+	    android:title="@string/choose_pro"
+	    android:key="choose_pro"
+	    android:summary="@string/choose_new_desc"
+	    android:entries="@array/list_choose_array"
+	    android:entryValues="@array/list_choose_values"/>
 	<PreferenceCategory
 	    android:title="@string/unmute">
 	</PreferenceCategory>

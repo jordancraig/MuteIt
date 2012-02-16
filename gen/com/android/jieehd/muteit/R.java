@@ -8,43 +8,56 @@
 package com.android.jieehd.muteit;
 
 public final class R {
+    public static final class array {
+        public static final int list_choose_array=0x7f040000;
+        public static final int list_choose_values=0x7f040001;
+    }
     public static final class attr {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int mute_blue=0x7f020001;
+        public static final int ic_stat_mute_notification=0x7f020001;
     }
     public static final class menu {
-        public static final int menu=0x7f050000;
+        public static final int menu=0x7f060000;
     }
     public static final class string {
-        public static final int about=0x7f040013;
-        public static final int about_app=0x7f040019;
-        public static final int about_title=0x7f040011;
-        public static final int alarm_vol_text=0x7f040005;
-        public static final int app_desc=0x7f04001a;
-        public static final int app_name=0x7f040001;
-        public static final int checkInfo=0x7f040009;
-        public static final int developer=0x7f040012;
-        public static final int developer_name=0x7f040018;
-        public static final int hello=0x7f040000;
-        public static final int media_vol_text=0x7f040003;
-        public static final int mute=0x7f04000b;
-        public static final int mute_all=0x7f04000a;
-        public static final int mute_button_text=0x7f040007;
-        public static final int mute_description=0x7f04000e;
-        public static final int notif_vol_text=0x7f04000c;
-        public static final int open_desc=0x7f040016;
-        public static final int open_source=0x7f040015;
-        public static final int prefTitle=0x7f040008;
-        public static final int ring_vol_text=0x7f040004;
-        public static final int sys_vol_text=0x7f04000d;
-        public static final int title=0x7f040002;
-        public static final int unmute=0x7f04000f;
-        public static final int unmute_description=0x7f040010;
-        public static final int voice_vol_text=0x7f040006;
-        public static final int web_value=0x7f040017;
-        public static final int website=0x7f040014;
+        public static final int about=0x7f05001b;
+        public static final int about_app=0x7f050022;
+        public static final int about_title=0x7f050014;
+        public static final int add_new_profile=0x7f050019;
+        public static final int add_new_profile_desc=0x7f05001a;
+        public static final int alarm_vol_text=0x7f050008;
+        public static final int app_desc=0x7f050023;
+        public static final int app_name=0x7f050001;
+        public static final int checkInfo=0x7f05000c;
+        public static final int choose_new=0x7f050016;
+        public static final int choose_new_desc=0x7f050018;
+        public static final int choose_pro=0x7f050017;
+        public static final int current_pro=0x7f050003;
+        public static final int default_pro=0x7f050004;
+        public static final int developer=0x7f050015;
+        public static final int developer_name=0x7f050021;
+        public static final int hello=0x7f050000;
+        public static final int media_vol_text=0x7f050006;
+        public static final int mute=0x7f05000e;
+        public static final int mute_all=0x7f05000d;
+        public static final int mute_button_text=0x7f05000a;
+        public static final int mute_description=0x7f050011;
+        public static final int notif_vol_text=0x7f05000f;
+        public static final int open_desc=0x7f05001f;
+        public static final int open_source=0x7f05001e;
+        public static final int prefTitle=0x7f05000b;
+        public static final int quick_settings=0x7f050002;
+        public static final int ring_vol_text=0x7f050007;
+        public static final int settings_title=0x7f05001d;
+        public static final int sys_vol_text=0x7f050010;
+        public static final int title=0x7f050005;
+        public static final int unmute=0x7f050012;
+        public static final int unmute_description=0x7f050013;
+        public static final int voice_vol_text=0x7f050009;
+        public static final int web_value=0x7f050020;
+        public static final int website=0x7f05001c;
     }
     public static final class xml {
         public static final int about=0x7f030000;

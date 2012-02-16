@@ -6,8 +6,10 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
@@ -17,14 +19,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends PreferenceActivity {
+public class MainActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.main);
-        
-
+        final SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         
         Preference checkMedia = (Preference) findPreference("checkMedia");
         checkMedia.setOnPreferenceClickListener(new OnPreferenceClickListener() {
@@ -127,14 +128,41 @@ public class MainActivity extends PreferenceActivity {
         				});
         
         
+        Preference list_profiles = (Preference) findPreference("choose_pro");
+        list_profiles.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+                                public boolean onPreferenceClick(Preference preference) {
+                                    SharedPreferences customSharedPreference = getSharedPreferences("preferences_Shared", Activity.MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = customSharedPreference.edit();
+                                    editor.putString("choose_pro","Select this to select MuteIt profile");
+                                    editor.commit();
+                                    setProfileCurrent();
+                                    onSharedPreferenceChanged(customSharedPreference, "choose_pro");
+                                    return true;
+                                }
+        				});
+    
+        
+        
+        
     }
     
+    private void setProfileCurrent()  {
+        final Preference key_current = (Preference) findPreference("key_current");
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        key_current.setSummary(sp.getString("choose_pro", ""));
+    }
+    
+    private void setData()  {
+        final Preference key_current = (Preference) findPreference("key_current");
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        key_current.setSummary(sp.getString("choose_pro", ""));
+    }
     
     public void triggerNotification(String msg) {
     	
     	final NotificationManager notificationManager;
     	final int APP_ID = 4567;
-    	final Notification notification =  new Notification(R.drawable.mute_blue, msg, System.currentTimeMillis());
+    	final Notification notification =  new Notification(R.drawable.ic_stat_mute_notification, msg, System.currentTimeMillis());
     	
         notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         Intent contentIntent = new Intent(this, MainActivity.class);
@@ -280,6 +308,15 @@ public class MainActivity extends PreferenceActivity {
                                 	}
                                 	Toast.makeText(getApplicationContext(), "Selected streams have been unmuted", Toast.LENGTH_SHORT);
     	
+    }
+
+    public void onSharedPreferenceChanged(SharedPreferences sp, String choose_pro) {
+        Preference pref = findPreference("key_current");
+
+        if (pref instanceof ListPreference) {
+            ListPreference listPref = (ListPreference) pref;
+            pref.setSummary(listPref.getEntry());
+        }
     }
 
     	

@@ -3,6 +3,9 @@
 
     <string name="hello">Hello World, MainActivity!</string>
     <string name="app_name">MuteIt</string>
+    <string name="quick_settings">Quick Settings</string>
+    <string name="current_pro">Current Profile</string>
+    <string name="default_pro">No profile in use.</string>
     <string name="title">Welcome to MuteIt!</string>
     <string name="media_vol_text">Mute Media Volume</string>
     <string name="ring_vol_text">Ringer Volume</string>
@@ -20,8 +23,14 @@
     <string name="unmute_description">Unmutes previously selected audio streams.</string>
 	<string name="about_title">About Application</string>
 	<string name="developer">Developer</string>
-	<string name="about">About</string>
+	<string name="choose_new">Choose a profile</string>
+	<string name="choose_pro">Choose profile</string>
+	<string name="choose_new_desc">Choose a MuteIt profile to load.</string>
+	<string name="add_new_profile">Add a new profile</string>
+	<string name="add_new_profile_desc">Add a new profile containing the elements you would like to mute.</string>
+	<string name="about">Settings</string>
 	<string name="website">Website</string>
+	<string name="settings_title">Settings</string>
 	<string name="open_source">We are open-sourced!</string>
 	<string name="open_desc">Mute It is an open source application, meaning the source code is freely available on GitHub for anyone who wishes to compile MuteIt for themselves. Click this text to view our GitHub page.</string>
 	<string name="web_value">Click to visit</string>
