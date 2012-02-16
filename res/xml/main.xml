@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:title="@string/title">
+	</PreferenceCategory>
+	<Preference 
+	    android:title="@string/prefTitle"
+	    android:summary="@string/checkInfo"/>
+	<CheckBoxPreference
+	    android:title="@string/media_vol_text"
+	    android:key="checkMedia"/>
+	<CheckBoxPreference
+	    android:title="@string/ring_vol_text"
+	    android:key="checkRing"/>
+	<CheckBoxPreference
+	    android:title="@string/alarm_vol_text"
+	    android:key="checkAlarm"/>
+	<CheckBoxPreference
+	    android:title="@string/voice_vol_text"
+	    android:key="checkVoice"/>
+	<CheckBoxPreference
+	    android:title="@string/notif_vol_text"
+	    android:key="checkNotify"/>
+	<CheckBoxPreference
+	    android:title="@string/sys_vol_text"
+	    android:key="checkSystem"/>
+	<PreferenceCategory
+	    android:title="@string/mute_all">
+	</PreferenceCategory>
+	<Preference 
+	    android:title="@string/mute"
+	    android:summary="@string/mute_description"
+	    android:key="muteButton"/>
+	<PreferenceCategory
+	    android:title="@string/unmute">
+	</PreferenceCategory>
+	<Preference
+	    android:title="@string/unmute"
+	    android:summary="@string/unmute_description"
+	    android:key="unmuteButton"/>
+</PreferenceScreen>

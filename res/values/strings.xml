@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">MuteIt</string>
+    <string name="title">Welcome to MuteIt!</string>
+    <string name="media_vol_text">Mute Media Volume</string>
+    <string name="ring_vol_text">Ringer Volume</string>
+    <string name="alarm_vol_text">Alarm Volume</string>
+    <string name="voice_vol_text">Voice Volume</string>
+    <string name="mute_button_text">Mute All!</string>
+    <string name="prefTitle">Check audio streams</string>
+    <string name="checkInfo">Check the audio streams you want to mute.</string>
+    <string name="mute_all">Mute All!</string>
+    <string name="mute">Mute</string>
+    <string name="notif_vol_text">Notification Volume</string>
+    <string name="sys_vol_text">System Volume</string>
+    <string name="mute_description">Mute selected audio streams.</string>
+    <string name="unmute">Unmute</string>
+    <string name="unmute_description">Unmutes previously selected audio streams.</string>
+	<string name="about_title">About Application</string>
+	<string name="developer">Developer</string>
+	<string name="about">About</string>
+	<string name="website">Website</string>
+	<string name="open_source">We are open-sourced!</string>
+	<string name="open_desc">Mute It is an open source application, meaning the source code is freely available on GitHub for anyone who wishes to compile MuteIt for themselves. Click this text to view our GitHub page.</string>
+	<string name="web_value">Click to visit</string>
+	<string name="developer_name">Jordan Craig</string>
+	<string name="about_app">About Application</string>
+	<string name="app_desc">Mute It will attempt to mute all audio streams currently running on your device. At the moment it is unable to mute alarm and notification streams due to a bug in the Android source code.</string>
+</resources>

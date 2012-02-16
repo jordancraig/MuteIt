@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:title="@string/about_title">
+    </PreferenceCategory>
+	<Preference
+	    android:title="@string/developer"
+	    android:summary="@string/developer_name"/>
+	<Preference
+	    android:title="@string/website"
+	    android:summary="@string/web_value"
+	    android:key="webBrowse"/>
+	<Preference
+	    android:title="@string/about_app"
+	    android:summary="@string/app_desc"/>
+	<Preference 
+	    android:title="@string/open_source"
+	    android:summary="@string/open_desc"
+		android:key="openSource"/>
+</PreferenceScreen>
